@@ -1,0 +1,18 @@
+#theme="kaolin-dark"
+# theme="hex_steel"
+# theme="dark_plus"
+theme="kaolin-dark"
+
+[editor]
+line-number="relative"
+bufferline="always"
+rulers=[80]
+# popup-border="all"
+
+[editor.cursor-shape]
+insert="bar"
+select="underline"
+
+[editor.file-picker]
+hidden=false
+
