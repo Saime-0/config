@@ -1,13 +1,12 @@
-#theme="kaolin-dark"
-# theme="hex_steel"
-# theme="dark_plus"
-theme="kaolin-dark"
+# theme="kaolin-dark"
+theme="saime-black-warm"
 
 [editor]
 line-number="relative"
 bufferline="always"
+
 rulers=[80]
-# popup-border="all"
+popup-border="all"
 
 [editor.cursor-shape]
 insert="bar"
@@ -15,4 +14,3 @@ select="underline"
 
 [editor.file-picker]
 hidden=false
-
