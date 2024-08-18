@@ -1,0 +1,5 @@
+finder = "custom"
+
+[custom_finder]
+program = "wofi"
+args = ["-H", "400", "-n", "-W", "300","-I", "-i", "-d", "-p", "Select copied text"]
