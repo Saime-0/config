@@ -1,0 +1,122 @@
+# Author : saime-0 <acc.saime.d@gmail.com>
+
+# author before edit: thlsrms <thlsrmsdev@gmail.com>
+
+# old values:
+"variable.other.member" = { fg = "violet7", modifiers = ["italic"] }
+"constant.character.escape" = { fg = "hint", modifiers = ["bold"] }
+
+"diff.plus" = "green0"
+"diff.delta" = "warn"
+"diff.minus" = "error"
+
+"warning" = "warn"
+"error" = "error"
+"info" = "info"
+"hint" = "hint"
+
+"diagnostic.error" = { underline = { style = "curl", color = "error" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "warn" } }
+"diagnostic.info" = { underline = { style = "curl", color = "info" } }
+"diagnostic.hint" = { underline = { style = "curl", color = "hint" } }
+
+"ui.linenr" = { fg = "gray0" }
+"ui.linenr.selected" = { fg = "gray1", modifiers = ["bold"] }
+"ui.cursorline" = { bg = "bg1" }
+"ui.cursorline.secondary" = { bg = "bg2" }
+"ui.cursorcolumn.primary" = { bg = "bg1" }
+"ui.cursorcolumn.secondary" = { bg = "bg2" }
+"ui.statusline" = { fg = "info", bg = "bg1" }
+"ui.statusline.normal" = { fg = "hint", bg = "bg1", modifiers = ["reversed", "bold"] }
+"ui.statusline.insert" = { fg = "green0", bg = "bg1", modifiers = ["reversed", "bold"] }
+"ui.statusline.select" = { fg = "ultramarine4_dark", bg = "bg1", modifiers = ["reversed", "bold"] }
+"ui.statusline.inactive" = { fg = "gray0", bg = "bg1" }
+"ui.popup" = { bg = "bg1" }
+"ui.window" = { fg = "bg1", bg = "bg0" }
+"ui.help" = { bg = "bg1", fg = "fg0" }
+"ui.text" = { fg = "fg1" }
+"ui.text.focus" = { fg = "selection0" }
+"ui.selection" = { bg = "selection1" }
+"ui.selection.primary" = { bg = "selection1" }
+"ui.cursor.primary" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "bg1", bg = "ultramarine4_dark" }
+"ui.menu" = { fg = "fg0", bg = "bg1" }
+"ui.menu.selected" = { fg = "selection0", bg = "bg2", modifiers = ["bold"] }
+"ui.virtual.wrap" = "bg2"
+"ui.virtual.whitespace" = "fg1"
+"ui.virtual.indent-guide" = "bg2"
+"ui.virtual.ruler" = { bg = "bg1" }
+"ui.virtual.inlay-hint" = "gray1"
+"ui.virtual.inlay-hint.parameter" = { fg = "gray1", modifiers = ["dim"] }
+"ui.virtual.inlay-hint.type" = { fg = "gray1", modifiers = ["dim"] }
+"ui.debug.breakpoint" = "error"
+"ui.debug.active" = "warn"
+
+# "markup.heading" = "info"
+# "markup.bold" = { modifiers = ["bold"] }
+# "markup.italic" = { modifiers = ["italic"] }
+# "markup.strikethrough" = { modifiers = ["crossed_out"] }
+# "markup.link.url" = { fg = "warn", underline = { style = "line" } }
+# "markup.link.text" = "selection0"
+# "markup.raw" = "selection0"
+
+# edited:
+"keyword" = "pearl_brown"
+"type" = "green_crayola"
+"type.builtin" = "orange_bronze"
+"constant" = "brilliant_crayola"
+"constant.numeric" = "blue_gray"
+"constant.builtin" = "orange_bronze"
+"function" = "pale_beaver"
+# "function.method" = "signal_clay" # в go работает неправильно
+"function.builtin" = "orange_bronze"
+"variable" = "marengo_blue"
+"variable.builtin" = "orange_bronze"
+"namespace" = "green_sage" # в go работает частично
+"string" = "dark_purple"
+"string.special" = "orange_bronze"
+"comment" = "green_moss"
+"ui.background" = { bg = "black" }
+"punctuation" = "green"
+"punctuation.delimiter" = "orange_bronze"
+"operator" = "green"
+"label" = "marengo_blue"
+
+[palette]
+
+# edited:
+signal_clay = "#7C4141"
+green = "#507C3B"
+dark_purple = "#454479"
+green_sage = "#AFBF7E"
+pearl_brown = "#69472C"
+marengo_blue = "#405469"
+orange_bronze = "#CC7832"
+green_crayola = "#6FAFBD"
+brilliant_crayola = "#9876AA"
+black = "#000000"
+# signal_black = "#262626"
+green_moss = "#38483d"
+# pale_beaver = "#B09D79"
+pale_beaver = "#9e7959"
+blue_gray = "#6897BB"
+# old values:
+# kaolin-dark palette
+bg0 = "#18181b" # black1
+bg1 = "#222225" # black2
+bg2 = "#303035" # black4
+fg0 = "#e6e6e8" # white1
+fg1 = "#adadb9" # whiet4
+gray0 = "#545c5e" # gray3
+gray1 = "#919a9c" # gray9
+green0 = "#6fb593" # spring-green3
+selection0 = "#68f3ca" # aquamarine3
+selection1 = "#192336" # sapphireBlue
+type = "#cd9575" # vermilion4
+hint = "#4d9391" # teal1
+info = "#80bcb6" # teal4
+warn = "#dbac66" # orange1
+error = "#cd5c60" # red1
+constant = "#ab98b5" # purple4
+ultramarine4_dark = "#968cc7"
+violet7 = "#766884"
