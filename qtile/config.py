@@ -5,17 +5,18 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-ALT = "mod1"
-SUPER = "mod4"
-CTRL = "control"
-SHIFT = "shift"
-ESC = "Escape"
-LEFT_CLICK = "Button1"
-MIDDLE_CLICK = "Button2"
-RIGHT_CLICK = "Button3"
+# theme.
+
+#     border = {
+#         'border_focus':Green.light2,
+#         "border_normal":Green.dark1,
+#         "border_width":2,
+#         'single_border_width':0
+#     }
+
 
 terminal = guess_terminal()
-filemanager = "nnn"
+filemanager = f"{terminal} -e nnn"
 appfider = ""
 telegram = "telegram-desktop"
 browser = "google-chrome-stable"
@@ -25,6 +26,15 @@ capturerect = ""
 taskmanager = f"{terminal} -e btop"
 clipboard = ""
 codeeditor = "code"
+
+ALT = "mod1"
+SUPER = "mod4"
+CTRL = "control"
+SHIFT = "shift"
+ESC = "Escape"
+LEFT_CLICK = "Button1"
+MIDDLE_CLICK = "Button2"
+RIGHT_CLICK = "Button3"
 
 keys = [
     # Run applications
@@ -122,8 +132,17 @@ for i in groups:
         ]
     )
 
+# layouts
+layout_theme = {
+    "margin": 7,
+    "border_focus": "#0663e8dd",
+    "border_normal": "#595959aa",
+    "border_on_single": False,
+    "border_width": 2,
+}
+
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(**layout_theme),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -142,6 +161,7 @@ widget_defaults = dict(
     font="sans",
     fontsize=12,
     padding=3,
+    foreground="#bab0af"
 )
 extension_defaults = widget_defaults.copy()
 
@@ -163,9 +183,9 @@ class KeyboardLayoutCapsIndicator(widget.CapsNumLockIndicator):
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                KeyboardLayoutCapsIndicator(),
+                KeyboardLayoutCapsIndicator(foreground="#ffffff"),
                 widget.CurrentLayout(),
                 widget.GroupBox(),
                 widget.Prompt(),
@@ -179,19 +199,20 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%I:%M %p"),
+                widget.clock.Clock(format="%H:%M"),
                 widget.Battery(
-                    foreground="#d75f5f",
-                    format="{char} {percent:2.0%} {watt:.2f} W",
+                    foreground="#C2CFA1",
+                    format="{char}{percent:2.0%} {watt:.2f}W",
                 ),
                 widget.Memory(
-                    foreground="#03fca9",
+                    foreground="#87B9F3",
                     format="{MemUsed: .0f}{mm}",
                     measure_mem="G",
                     update_interval=5,
                 ),
                 widget.QuickExit(
-                    default_text="[ die ]"
+                    default_text="[ die ]",
+                    countdown_format="[ {} ]"
                 ),
             ],
             24,
@@ -217,7 +238,7 @@ dgroups_app_rules = []  # type: list
 follow_mouse_focus = True
 bring_front_click = False
 floats_kept_above = True
-cursor_warp = False
+cursor_warp = True
 floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
